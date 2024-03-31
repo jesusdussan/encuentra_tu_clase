@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/012c750875.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>interfaz profesores</title>
+</head>
+<body>
+    <div class="container-fluid m-0 p-0">
+
+        <!-- CABECERA O HEADER DE LA PAGINA -->
+        <header class="container-fluid navbar bg-success row m-0 ">
+
+
+            <div class="container-fluid  col-12 col-md-8 col-lg-8 row">
+                <div class="col-12 col-md-1 col-lg-1 ">
+                    <img class="imagen-logo" src="../img/fet.png" alt="">
+                </div>
+                <div class=" col-12 col-md-11 col-lg-11 text-center">
+                    <h1 class="text-light text-capitalize"> ubicacion de clases</h1>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end col-12 col-md-4 col-lg-4">
+                <a href="../index.html" class="btn btn-success text-capitalize border-light"><i class="fa-solid fa-right-to-bracket"></i> cerrar sesion</a>
+                <button class="btn btn-success text-capitalize border-radius-3 border-light rounded-pill" type="button"  data-bs-toggle="modal" data-bs-target="#modal-perfil"><i class="fa-solid fa-user-tie"></i></button>
+
+
+                 <!-- MODAL DEL PERFIL DEL USUARIO modal-fullscreen -->
+                 <div class="modal fade" id="modal-perfil" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                        <div class="modal-header bg-success text-light text-capitalize" >
+                          <h5 class="modal-title text-capitalize" id="staticBackdropLabel">configuraciones basicas para agregar clases</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-0 p-md-0 p-lg-0">
+                            <div class="container-fluid m-0 p-0 row">
+                                <aside class="container-fluid col-12 col-md-4 col-lg-4">
+                                    <div class="container-fluid d-flex text-start m-0 p-0">
+                                        <div class="container-fluid text-start mt-4">
+                                            <h3 class="w-100"><b class="text-capitalize">bienvenido</b> profesor(a): <b class="text-capitalize" id="nombre-profesor"> jesus dussan </b></h3>
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid text-capitalize m-0 mt-4">
+                                        <h4 class="text-start">menu de acciones:</h4>
+                                    </div>
+                                    <div class="container-fluid m-0 p-0 pb-1 mt-4">
+                                        <div class="container-fluid m-0 p-0">
+                                            <button class="btn btn-primary mt-1 w-100" data-bs-toggle="offcanvas" data-bs-target="#formulario-configurar-clases">configurar clases</button>
+                                        </div>
+                                        <div class="container-fluid m-0 p-0">
+                                            <button class="btn btn-primary mt-1 w-100">configurar noticias</button>
+                                        </div>
+                                        <div class="container-fluid m-0 p-0">
+                                            <button class="btn btn-primary mt-1 w-100">cambiar nombre de usuario</button>
+                                        </div>
+                                        <div class="container-fluid m-0 p-0">
+                                            <button class="btn btn-primary mt-1 w-100">cambiar clave</button>
+                                        </div>
+                                        <div class="container-fluid m-0 p-0"> 
+                                            <button class="btn btn-primary mt-1 w-100">enviar sugerencias</button>
+                                        </div>
+                                    </div>
+                                </aside>
+                                <section class="container-fluid col-12 col-md-8 col-lg-8">
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="formulario-configurar-clases" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+ 
+                      </div>
+                    </div>
+                  </div>
+                  <!-- MODAL/FORMULARIO DE CONFIGURACION DE CREACION DE CLASES -MENU BASICO -->
+
+
+            </div>
+        </header>
+
+        <!-- CONTENEDOR DE LAS VISTAS DE LAS SECCIONES -->
+        <main class="container-fluid bg-light row m-0">
+
+            <!-- CONTENEDOR DE LAS VISTAS DE LAS NOTICIAS Y SUS CONFIGURACIONES -->
+            <section class="container-fluid col-12 col-md-6 col-lg-6 row">
+
+                <!--  -->
+                <div class="container-fluid d-flex justify-content-center mt-5 text-capitalize col-12 col-md-12 col-lg-12">
+                    <h2>seccion de noticias</h2>
+                </div>
+
+                <!--  -->
+                <div class="container-fluid d-flex justify-content-center mt-4 col-12 col-md-12 col-lg-12 row">
+                    <div class="container-fluid  col-12 col-md-12 col-lg-12 row d-flex justify-content-around w-75" >
+
+                        <button class="btn btn-outline-success  rounded-pill text-capitalize col-5 col-md-5 col-lg-5 " data-bs-toggle="modal" data-bs-target="#agregarNoticia">agregar noticia</button>
+                    </div>
+                    <!-- contenedor de modales -->
+                    <div class="container-fluid col-12 col-md-12 col-lg-12">
+                        <!-- MODALES DE NOTICIAS -->
+
+                        <!-- MODAL/FORMULARIO AGREGAR NOTICIA-->
+                        <div class="modal fade" id="agregarNoticia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                           <div class="modal-dialog">
+                             <div class="modal-content">
+                               <div class="modal-header bg-success text-light text-capitalize" >
+                                 <h5 class="modal-title text-capitalize" id="staticBackdropLabel">agregar noticia</h5>
+                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                               </div>
+                                <div class="modal-body">
+                                        <form action="" id="formulario-registro">
+                                            <div>
+                                                <label for="nombre-apellido" class="form-label text-capitalize">imagen</label>
+                                                <input type="text" class="form-control" id="nombre-apellido">
+                                            </div>
+                                            <div>
+                                                <label for="" class="form-label text-capitalize">titulo</label>
+                                                <input type="text" class="form-control" id="codigo-universidad-registro">
+                                            </div>
+                                            <div>
+                                                <label for="" class="form-label text-capitalize">texto de la noticia</label>
+                                                <input type="text" class="form-control" id="codigo-universidad-registro">
+                                            </div>
+                                    
+                                            <div class="modal-footer">
+                                                <button type="reset" class="btn btn-secondary text-capitalize">resetear formulario</button>
+                                                <button type="submit" class="btn btn-primary text-capitalize">crear noticia</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                           
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MODAL/FORMULARIO AGREGAR NOTICIA-->
+
+
+
+                        <!-- MODAL/FORMULARIO EDITAR NOTICIA -->
+                        <div class="modal  fade  " id="editarNoticia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog ">
+                          <div class="modal-content">
+                            <div class="modal-header bg-success text-light text-capitalize" >
+                              <h5 class="modal-title text-capitalize" id="staticBackdropLabel">editar noticia</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                 <form action="" id="">
+                                    <div>
+                                        <label for="nombre-apellido" class="form-label text-capitalize">imagen</label>
+                                        <input type="image" class="form-control" id="">
+                                    </div>
+                                    <div>
+                                        <label for="" class="form-label text-capitalize">titulo</label>
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                    <div>
+                                        <label for="" class="form-label text-capitalize">texto de la noticia</label>
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                   
+                                     <div class="modal-footer">
+                                       <button type="reset" class="btn btn-secondary text-capitalize">resetear formulario</button>
+                                       <button type="submit" class="btn btn-primary text-capitalize">editar noticia</button>
+                                     </div>
+                                 </form>
+                            </div>
+                          
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- final de contenedor de modales -->
+                </div>
+                <div class="container-fluid mt-5">
+                    <p class="text-center"><b class="text-capitalize">crea</b> una nueva noticia...</p>
+
+                    <!-- contenedor de noticias creadas por el usuario -->
+                    <div class="container-fluid">
+
+                        <div class="card border-success">
+                            <h5 class="card-header border-success">noticia uno</h5>
+                            <div class="card-body">
+                                <h5 class="card-title"> noticia importante fet</h5>
+                                <p class="card-text">este es el contenedor de las visas de las noticias y sus funcionalidades</p>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button class="btn btn-danger border-success">eliminar noticia</button>
+                                <button class="btn btn-warning border-success " data-bs-toggle="modal" data-bs-target="#editarNoticia">editar noticia</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!--  -->
+
+
+            <!-- CONTENEDOR DE LAS VISTAS DE UBICACION DE CLASES Y SUS CONFIGURACIONES -->
+            <section class="container-fluid col-12 col-md-6 col-lg-6 m-0 p-0">
+
+                <!-- CONTENEDOR DEL TITULO PRINCIPAL DE LA SECCION DE UBICACION DE CLASES -->
+                <div class="container-fluid d-flex justify-content-center mt-5">
+                    <h2><b class="text-capitalize">horario</b> actualizado del día </h2>
+                </div>
+                <!-- FINLA DEL CONTENEDOR PRINCIPAL DE LA SECCION DE UBICACION DE CLASES -->
+
+                <!-- CONTENEDOR DE LOS BOTONES DE LAS ACCIONES PRINCIPALES DE LAS VISTAS CREACIONES Y CONFIGURACIONES DE CLASES  -->
+                <div class="container-fluid d-flex justify-content-center mt-4 row">
+                    <nav class="container-fluid navbar bg-success rounded-pill d-flex justify-content-around ">
+                        <button class="btn btn-success border-light col-3 text-capitalize col-md-3 col-lg-3 rounded-pill " data-bs-toggle="modal" data-bs-target="#formulario-filtrar-clases">filtrar</button>
+                        <button class="btn btn-success border-light col-3 text-capitalize col-md-3 col-lg-3 rounded-pill " data-bs-toggle="modal" data-bs-target="#formulario-configuracion-basica-clase">configuraciones</button>
+                        <button class="btn btn-success border-light col-3 text-capitalize col-md-3 col-lg-3 rounded-pill " data-bs-toggle="modal" data-bs-target="#formulario-agregar-clase">agregar clase</button>
+                    </nav>
+                </div>
+
+
+                <!-- CONTENEDOR DE LA TABLA DE LAS CLASES -->
+                <div class="container-fluid d-flex mt-4 m-0 p-0 overflow-x-auto ">
+
+                    <!-- TABLA DE LISTA DE CLASES  -->
+                    <table class="table table-md table-lg table-dark table-striped overflow-x-auto bg-success table-responsive row p-0 rounded-3 m-0 p-0 table-bordered ">
+                        <thead class="container-fluid text-center row p-0 rounded-3 m-0">
+                            <tr class="container-fluid d-flex justify-content-around text-capitalize text-center p-1 m-1 rounded-3">
+                                    <th class=" col-2 col-md-2 col-lg-2  ">fécha</td>
+                                    <th class=" col-2 col-md-2 col-lg-2  ">hora</td>
+                                    <th class=" col-2 col-md-2 col-lg-2  ">materia</td>
+                                    <th class=" col-2 col-md-2 col-lg-2  ">semestre</td>
+                                    <th class=" col-2 col-md-2 col-lg-2  ">salón</td>
+                                    <th class=" col-2 col-md-2 col-lg-2  ">acciones</td>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider container-fluid text-center row p-0 rounded-3 m-0 table-active">
+                            <tr class="container-fluid d-flex justify-content-around text-capitalize text-center p-1 m-1 rounded-3">
+                                <td class="col-2 col-md-2 col-lg-2 overflow-x-autoi">12/07/24</td>
+                                <td class="col-2 col-md-2 col-lg-2 overflow-x-autoi">8:00 a.m</td>
+                                <td class="col-2 col-md-2 col-lg-2 overflow-x-autoi">introduccion ingenieria de software</td>
+                                <td class="col-2 col-md-2 col-lg-2 overflow-x-autoi">semestre 1</td>
+                                <td class="col-2 col-md-2 col-lg-2 overflow-x-autoi">b-2 sala 2</td>
+                                <td class= "btn-group-vertical col-2 col-md-2 col-lg-2"  role="group">
+                                    <button class="btn btn-danger">eliminar</button>
+                                    <button class="btn btn-warning">editar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- FINAL DE LA TABLA DE LISTA DE CLASES  -->
+
+
+                </div>
+                <!-- FINAL DEL CONTENEDOR DE LA TABLA DE LAS CLASES -->
+
+                <!-- CONTENEDOR DE LOS MODALES/FORMUALRIOS DE LAS SECCION DE UBICACION DE CLASES -->
+                <div>
+                    <!-- ---------------- FINAL MODAL/FORMULARIO PARA AGREGAR UNA CLASE --> 
+                 <div class="modal fade" id="formulario-agregar-clase" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header bg-success text-light text-capitalize" >
+                          <h5 class="modal-title text-capitalize" id="staticBackdropLabel">agregar una clase</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                             <form action="" id="">
+                                <div class="container-fluid d-flex justify-content-start">
+                                    <div class="form-check form-switch form-check-inline text-end">
+                                        <label for="no-hay-clase" class="form-check-label ">no hay clase:</label>
+                                    </div>
+                                    <div class="form-check form-switch form-check-inline">
+                                        <input type="checkbox" class="form-check-input" id="si-hay-clase" value="option1">
+                                        <label for="si-hay-clase" class="form-check-label ms-2">hay clase</label>
+                                    </div>
+                                </div>
+
+                                 <div>
+                                     <label for="nombre-apellido" class="form-label text-capitalize">fécha</label>
+                                     <input type="date" class="form-control" id="nombre-apellido">
+                                 </div>
+                                 <div>
+                                     <label for="" class="form-label text-capitalize">hora:</label>
+                                     <input type="time" class="form-control" id="codigo-universidad-registro">
+                                 </div>
+                                 <div>
+                                    <label for="" class="form-label text-capitalize">materia:</label>
+                                     <select name="" id="" class="form-select form-select-lg mb-3"></select>
+                                 </div>
+                                 <div>
+                                    <label for="" class="form-label text-capitalize">seméstre:</label>
+                                     <select name="" id="" class="form-select form-select-lg mb-3">
+                                        <option value="">seleccionar semestre</option>
+                                        <option value="s-1">semestre 1</option>
+                                        <option value="s-2">semestre 2</option>
+                                        <option value="s-3">semestre 3</option>
+                                        <option value="s-4">semestre 4</option>
+                                        <option value="s-5">semestre 5</option>
+                                        <option value="s-6">semestre 6</option>
+                                        <option value="s-7">semestre 7</option>
+                                        <option value="s-8">semestre 8</option>
+                                        <option value="s-9">semestre 9</option>
+                                        <option value="s-10">semestre 10</option>
+                                     </select>
+                                 </div>
+                                 <div>
+                                    <label for="" class="form-label text-capitalize">salón:</label>
+                                     <select name="" id="" class="form-select form-select-lg mb-3"></select>
+                                 </div>
+                                 <div>
+                                    <label for="" class="form-label text-capitalize">nota de clase:</label>
+                                     <input type="text" class="form-control" id="">
+                                 </div>
+ 
+                                 <div class="modal-footer">
+                                   <button type="reset" class="btn btn-secondary text-capitalize">resetear formulario</button>
+                                   <button type="submit" class="btn btn-primary text-capitalize">crear clase</button>
+                                 </div>
+                             </form>
+                        </div>
+ 
+                      </div>
+                    </div>
+                  </div>
+                  <!------------------ FINAL MODAL/FORMULARIO PARA AGREGAR UNA CLASE------------------- -->
+
+                  <!-- -------------------------------------------------------------------------------- -->
+
+                  <!-- MODAL/FORMULARIO DE CONFIGURACION DE CREACION DE CLASES -MENU BASICO -->
+                 <div class="modal fade" id="formulario-configuracion-basica-clase" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header bg-success text-light text-capitalize" >
+                          <h5 class="modal-title text-capitalize" id="staticBackdropLabel">configuraciones basicas para agregar clases</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                             <form action="" id="formulario-registro">
+                                 <div>
+                                     <label for="nombre-apellido" class="form-label text-capitalize">semestres que dictas:</label>
+                                     <input type="text" class="form-control" id="nombre-apellido">
+                                 </div>
+                                 <div>
+                                     <label for="" class="form-label text-capitalize">materias que dictas:</label>
+                                     <input type="text" class="form-control" id="codigo-universidad-registro">
+                                 </div>
+                                 <div>
+                                    <label for="" class="form-label text-capitalize">jornadas que dictas:</label>
+                                    <input type="text" class="form-control" id="">
+                                </div>
+                                
+ 
+                                 <div class="modal-footer">
+                                   <button type="reset" class="btn btn-secondary text-capitalize">resetear formulario</button>
+                                   <button type="submit" class="btn btn-primary text-capitalize">configurar clases</button>
+                                 </div>
+                             </form>
+                        </div>
+ 
+                      </div>
+                    </div>
+                  </div>
+                  <!-- MODAL/FORMULARIO DE CONFIGURACION DE CREACION DE CLASES -MENU BASICO -->
+
+                  <!-- --------------------------------------------------------------------- -->
+
+                  <!-- MODAL/FORMULARIO PARA FILTRAR CLASES YA ASIGNADAS -->
+                 <div class="modal fade" id="formulario-filtrar-clases" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header bg-success text-light text-capitalize" >
+                          <h5 class="modal-title text-capitalize" id="staticBackdropLabel">filtrar vistas de clases</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                             <form action="" id="formulario-registro">
+                                <div class="text-center">
+                                    <label for="nombre-apellido" class="form-label text-capitalize ">por fecha:</label>
+                                </div>
+                                 <div>
+                                     
+                                     <label for="" class="form-label text-capitalize">de:</label>
+                                     <input type="date" class="form-control" id="nombre-apellido">
+                                     <label for="" class="form-label text-capitalize">hasta:</label>
+                                     <input type="date" class="form-control">
+                                 </div>
+                                 <div class="text-center mt-4">
+                                    <label for="" class="form-label text-capitalize text-center">por horas:</label>
+                                 </div>
+                                 <div>
+                                     
+                                     <label for="" class="form-label text-capitalize">de:</label>
+                                     <input type="time" class="form-control" id="codigo-universidad-registro">
+                                     <label for="" class="form-label text-capitalize">hasta:</label>
+                                     <input type="time" class="form-control">
+                                 </div>
+ 
+                                 <div class="modal-footer">
+                                   <button type="reset" class="btn btn-secondary text-capitalize">resetear formulario</button>
+                                   <button type="submit" class="btn btn-primary text-capitalize">registrarse</button>
+                                 </div>
+                             </form>
+                        </div>
+ 
+                      </div>
+                    </div>
+                  </div>
+                  <!-- FINAL DEL MODAL/FORMULARIO PARA FILTRAR CLASES YA ASIGNADAS -->
+
+
+                </div>
+                <!-- CONTENEDOR DE LOS MODALES/FORMUALRIOS DE LAS SECCION DE UBICACION DE CLASES -->
+            </section>
+            <!-- FINAL DE LA SECCION DE UBICACION DE CLASES -->
+            
+        </main>
+        <!-- FINAL CONTENEDOR PRINCIPAL DE LAS VISTAS DE CONFIGURACIONES Y ACCIONES DE LA PLATAFORMA -->
+
+
+    </div>
+    <!-- FINAL CONTENEDOR PRINCIPAL DEL CONTENIDO DEL DOCUMENTO -->
+
+    <script type="module" src="../js/js/bootstrap.min.js"></script>
+</body>
+</html>

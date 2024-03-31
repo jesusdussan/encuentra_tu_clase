@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/012c750875.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <title>encuentra tu clase</title>
+</head>
+<body >
+    <!-- CONTENEDOR PRINCIPAL DE TODAS LAS VISTAS DEL PROYECTO -->
+    <div class="container-fluid m-0 p-0">
+
+        <!-- CONTENEDOR DE LA CABECERA -->
+        <header class="container-fluid navbar bg-success row m-0  pd-md-0 pt-md-0 pd-lg-0 pt-lg-0 md-md-0 mt-md-0 md-lg-0 mt-lg-0  ">
+
+            <div class="container-fluid  col-12 col-md-8 col-lg-8 row m-0">
+                <div class=" container-fluid my-0 col-12 col-md-6 col-lg-6 d-flex justify-content-center m-0" id="logo-img">
+                    <img class="imagen-logo " src="./img/fet.png" alt="">
+                </div>
+                <div class="container-fluid col-12 col-md-6 col-lg-6 text-start mt-4 mb-3">
+                    <h1 class="text-light text-capitalize my-0 text-center">encuentra tu clase</h1>
+                </div>
+            </div>
+
+            <!-- CONTENEDOR DE BOTONES DE LA CABECERA -->
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end col-12 col-md-4 col-lg-4 my-0 ">
+              <label class="form-label text-center text-light text-capitalize mt-1">registrarse:</label>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success border-light" data-bs-toggle="modal" data-bs-target="#myModalRegistro">
+                  <i class="fa-solid fa-user-plus text-light"></i>
+                </button>
+  
+                 <!-- Modal -->
+                 <div class="modal fade" id="myModalRegistro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                   <div class="modal-dialog">
+                     <div class="modal-content">
+                       <div class="modal-header bg-success text-light text-capitalize" >
+                         <h5 class="modal-title text-capitalize" id="staticBackdropLabel">registro de profesores</h5>
+                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                       </div>
+                       <div class="modal-body">
+                            <form action="/validar"  method="post">
+                                <div>
+                                    <label for="nombre-apellido" class="form-label text-capitalize">nombres y apellidos completos</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre">
+                                </div>
+                                <div>
+                                  <label for="nombre-apellido" class="form-label text-capitalize">gmail</label>
+                                  <input type="email" class="form-control" id="gmail" name="gmail">
+                                </div>
+                                <div>
+                                    <label for="" class="form-label text-capitalize">codigo universidad</label>
+                                    <input type="text" class="form-control" id="codigoUniversidad" name="codigoUniversidad">
+                                </div>
+                                <div>
+                                  <label for="nombre-apellido" class="form-label text-capitalize">pasword</label>
+                                  <input type="password" class="form-control" id="password" name="password">
+                                </div>
+                                <div>
+                                  <label for="nombre-apellido" class="form-label text-capitalize">prepetir pasword</label>
+                                  <input type="password" class="form-control" id="passwordVerificada" name="passwordVerificada">
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="reset" class="btn btn-secondary text-capitalize">resetear formulario</button>
+                                  <button type="submit" class="btn btn-primary text-capitalize" value="registrar">registrarse</button>
+                                </div>
+                            </form>
+                       </div>
+
+                     </div>
+                   </div>
+                 </div>
+
+                
+                <!-- BOTON DE AYUDA -->
+                <a href="./ayuda.html" class="btn btn-success border-light text-capitalize">ayuda</a>
+                <!-- BOTON DE AYUDA -->
+
+            </div>
+            <!-- FINLA DEL CONTENEDOR DE BOTONES DE LA CABECERA -->
+
+        </header>
+        <!-- FINAL DEL CONTENEDOR DE LA CABECERA -->
+
+
+
+        <!-- CONTENEDOR DE LAS SECCIONES DE LA PAGINA -->
+        <main class="container-fluid row m-0 ">
+            <section class="container-fluid col-12 col-md-6 col-lg-6 m-0 p-0 ">
+
+                <div class="container-fluid justify-content-center">
+
+                    <div class="container-fluid mt-5">
+                        <h2 class="text-capitalize text-center">ubica tu clase</h2>
+                    </div>
+
+                    <div class="container-fluid mt-5 text-capitalize text-center">
+                        <h3>escoge una opcion</h3>
+                    </div>
+                    <div class="container-fluid mt-5 row d-flex justify-content-center m-0">
+                        
+                            <!-- Button trigger modal -->
+                           <button type="button" class="btn btn-success text-capitalize col-12 col-md-5 col-lg-5 mt-4 m-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                               soy estudiante
+                             </button>
+  
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header bg-success text-light text-capitalize">
+                                    <h5 class="modal-title" id="exampleModalLabel">ingreso estuduante</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <form action="">
+                                        <div>
+                                            <label for="" class="form-label text-capitalize">codigo universidad</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="reset" class="btn btn-secondary text-capitalize" >resetear formulario</button>
+                                          <button type="button" class="btn btn-primary text-capitalize">ingresar</button>
+                                        </div>
+                                    </form>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                        
+                            
+                            <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success col-12 col-md-5 col-lg-5 m-1 text-capitalize mt-4" data-bs-toggle="modal" data-bs-target="#ingreso-profesores">
+                          soy profesor
+                        </button>
+
+                         <!-- Modal -->
+                         <div class="modal fade" id="ingreso-profesores" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                           <div class="modal-dialog">
+                             <div class="modal-content">
+                               <div class="modal-header bg-success text-light text-capitalize">
+                                 <h5 class="modal-title text-capitalize" id="exampleModalLabel">ingreso profesores</h5>
+                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                               </div>
+                               <div class="modal-body">
+                                 <form action="">
+                                     <div>
+                                         <label for="" class="form-label text-capitalize">usuario</label>
+                                         <input type="text" class="form-control">
+                                     </div>
+                                     <div>
+                                        <label for="" class="form-label text-capitalize">codigo universidad</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="reset" class="btn btn-secondary text-capitalize" >resetear formulario</button>
+                                      <button type="button" class="btn btn-primary text-capitalize">ingresar</button>
+                                    </div>
+                                 </form>
+                               </div>
+                               
+                             </div>
+                           </div>
+                         </div>
+                    
+                    </div>
+                    <!-- FINAL DEL CONTENEDOR DE LOS BOTONES DE INGRESO -->
+                </div>
+
+            </section>
+
+            <section class="container-fluid col-12 col-md-6 col-lg-6 row m-0 p-0 ">
+                <div class="container-fluid mt-5 d-flex justify-content-center col-12 col-md-12 col-lg-12 row m-0">
+                    <h3 class="text-capitalize text-center col-12 col-md-12 col-lg-12">noticias fet</h3>
+                    <p class="text-center mt-5 col-12 col-md-12 col-lg-12">en esta seccion encontraras noticias importantes de nuestra universidad <b>fet</b></p>
+                </div class>
+
+                    <!-- CONTENEDOR DE VISTAS DE LAS NOTICIAS -->
+                <div class="container-fluid row d-flex justify-content-center col-12 col-md-12 col-lg-12 mt-3 m-0 p-0" data-bs-spy="scroll" data-bs-spy="scroll">
+
+
+                    <div class="card m-1" style="max-width: 540px;">
+                        <div class=" container-fluid  row g-0">
+                          <div class=" col-12 col-md-4  col-lg-4">
+                            <img src="./img/fet.png" class="img-fluid rounded-start" alt="...">
+                          </div>
+                          <div class="col-12 col-md-8  col-lg-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="card mb-3 m-1 " style="max-width: 540px;">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="./img/fet.png" class="img-fluid rounded-start" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+                </div>
+            </section>
+        </main>
+        <!-- FINAL DEL CONTENEDOR DE LAS SECCIONES DE LA PAGINA -->
+
+
+
+        <!-- CONTENEDOR DEl PIE DE PAGINA O FINAL DE LA PAGINA -->
+        <footer class="footer bg-success">
+
+        </footer>
+        <!-- CONTENEDOR DEl PIE DE PAGINA O FINAL DE LA PAGINA -->
+
+    </div>
+    <!-- FINAL DEL CONTENEDOR PRINCIPAL DE TODAS LAS VISTAS DEL PROYECTO -->
+
+
+    <script type="module" src="/js/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
